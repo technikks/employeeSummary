@@ -7,7 +7,6 @@ This appplication is a software engineering team generator command line applicat
 
 ## Mock-Up
 ![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
-![Employee Summary 2](./Assets/10-OOP-homework-demo-2.png)
 
 ## Walkthrough Video
 

@@ -19,7 +19,7 @@ const render = require("./lib/htmlRenderer");
 // HINT: make sure to build out your classes first! Remember that your Manager, Engineer, and Intern classes should all extend from a class named Employee; see the directions for further information. Be sure to test out each class and verify it generates an object with the correct structure and methods. This structure will be crucial in order or the provided `render` function to work!
 
 // Welcome message.
-console.log(`Welcome to the Team Profile Generator!`.magenta.bold);
+console.log(`Welcome to the Team Profile Generator for your engineering team!`.magenta.bold);
 
 const team = [] 
 
@@ -44,7 +44,7 @@ const startApp = () => {
     });
 };
 
-// Invoking app to start after welcome message
+// Invoke startApp() function to start prompt
 startApp()
 
 // Function to add information about Manager. 
@@ -84,7 +84,7 @@ const addManager = () => {
         if (res.next === true) {
             startApp()
         } else {
-            console.log(`Generating profiles for your team...`); 
+            generateTeam();
         }
     })
 }; 
@@ -126,7 +126,7 @@ const addEngineer = () => {
         if (res.next === true) {
             startApp()
         } else {
-            console.log(`Generating profiles for your team...`); 
+            generateTeam();
         }
     }); 
 }; 
@@ -168,23 +168,27 @@ const addIntern = () => {
         if (res.next === true) {
             startApp()
         } else {
-            console.log(`Generating profiles for your team...`); 
+            generateTeam();
         }
     })
 }; 
 
 
 // After the user has input all employees desired, call the `render` function (require above) and pass in an array containing all employee objects; the `render` function will generate and return a block of HTML including templated divs for each employee!
-
-render(team);
+// render(team);
+//render(team)
 
 
 // After you have your html, you're now ready to create an HTML file using the HTML returned from the `render` function. Now write it to a file named `team.html` in the `output` folder. You can use the variable `outputPath` above target this location.
 
 // Hint: you may need to check if the `output` folder exists and create it if it does not.
-fs.writeFile('team.html')
+// fs.writeFile(outputPath, render(team), function (err) {
+//     if(err) return console.log(err); 
+//     console.log("Profiles for your Engineering Team have been generated!")
+// }); 
 
 
-
-
-
+function generateTeam() {
+    fs.writeFileSync(outputPath, render(team), "utf-8");
+    console.log(`Success! See Team Profile Page at ${outputPath}`)
+}

@@ -1,7 +1,7 @@
 # teamProfileGenerator
 GW Coding Homework #10 due Thursday, January 28, 2021.
 
-![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
+![Employee Summary 1](Assets/employee-profile-html.png)
 
 
 ## Description

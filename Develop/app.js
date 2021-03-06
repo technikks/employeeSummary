@@ -190,5 +190,5 @@ const addIntern = () => {
 
 function generateTeam() {
     fs.writeFileSync(outputPath, render(team), "utf-8");
-    console.log(`Success! See Team Profile Page at ${outputPath}`)
+    console.log(`Generating profiles for your engineer team...`.magenta.bold)
 }

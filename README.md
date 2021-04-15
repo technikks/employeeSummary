@@ -1,5 +1,4 @@
 # teamProfileGenerator
-GW Coding Bootcamp Homework #10
 
 ![Employee Summary 1](Assets/employee-profile-html.png)
 

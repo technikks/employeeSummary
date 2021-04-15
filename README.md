@@ -12,8 +12,8 @@ This appplication is a software engineering team generator command line applicat
 
 
 ## NPM Modules
-* Inquirer
-* Colors
+* [Inquirer](https://www.npmjs.com/package/inquirer)
+* [Colors](https://www.npmjs.com/package/colors)
 
 
 ## Set Up
